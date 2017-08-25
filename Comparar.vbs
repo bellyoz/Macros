@@ -19,7 +19,7 @@ Sub Comparar()
     For Each aSheet In Worksheets
 
         Select Case aSheet.Name
-            Case "comun"
+                Case "SheetResult"
                 Application.DisplayAlerts = False
                 aSheet.Delete
                 Application.DisplayAlerts = True
@@ -56,8 +56,8 @@ Sub Comparar()
     
     
     Sheets.Add After:=ActiveSheet
-    ActiveSheet.Name = "comun"
-    Range("A1") = "Nombre Persona"
+    ActiveSheet.Name = "sheetResult"
+    Range("A1") = "NameColumn"
     Range("A2:A4510").Value = Application.Transpose(arregloRTA)
     Columns("A:A").EntireColumn.AutoFit
     ActiveSheet.Range("A:A").RemoveDuplicates Columns:=1, Header:=xlNo
