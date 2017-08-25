@@ -13,8 +13,8 @@ Sub Comparar()
     Dim y As String
     
     
-    Set h1 = Workbooks("FIRMASBancolombia.xlsx").Sheets("firmasSinRep")
-    Set h2 = Workbooks("Nacional.xlsx").Sheets("Consulta por Cedula")
+        Set h1 = Workbooks("book1").Sheets("sheet")
+            Set h2 = Workbooks("book2").Sheets("sheet")
     
     For Each aSheet In Worksheets
 
